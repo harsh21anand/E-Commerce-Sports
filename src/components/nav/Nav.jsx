@@ -280,7 +280,7 @@ function Nav() {
 
                   {/* Mega Menu */}
                   {activeMenu === item && (
-  <div className="absolute top-full left-0 bg-white text-black shadow-lg rounded-lg p-6 flex gap-10 transition-all duration-300 w-[360px]">
+  <div className="absolute top-full left-0 bg-white text-black shadow-lg rounded-lg p-6 flex gap-10 transition-all duration-300 w-[450px]">
 
                       {menus[item].map((menu, i) => (
                         <div key={i} className="flex flex-col">
