@@ -18,13 +18,7 @@ const Offers = () => {
     <div className="flex flex-col min-h-screen overflow-x-hidden">
        <Header />
        <Navbar />
-     <button
-        onClick={() => navigate("/")}
-        className="flex items-center mb-6 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-lg font-semibold shadow"
-        style={{ maxWidth: 200 }}
-      >
-        <span className="mr-2 text-xl">&larr;</span> Back
-      </button>
+     
       
       
       {/* Clearance Sale Section */}
