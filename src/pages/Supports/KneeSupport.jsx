@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ShopCard from "../../components/card/ShopCard";
+import Navbar from "../../components/nav/Nav";
+import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 
 const kneesupports = [
@@ -132,15 +134,9 @@ const KneeSupport = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-10">
-      <button
-        onClick={() => navigate("/")}
-        className="flex items-center mb-6 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-lg font-semibold shadow"
-        style={{ maxWidth: 200 }}
-      >
-        <span className="mr-2 text-xl">&larr;</span> Back
-      </button>
-      <h1 className="text-3xl font-bold mb-8 text-center">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
+     
+      <h1 className="text-3xl font-bold mb-8 text-center"><br />
         Knee Support Collection
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -155,6 +151,7 @@ const KneeSupport = () => {
           />
         ))}
       </div>
+      <br /><br />
       <Footer />
     </div>
   );
