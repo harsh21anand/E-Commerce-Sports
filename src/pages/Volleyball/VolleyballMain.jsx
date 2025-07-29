@@ -12,75 +12,71 @@ const volleyballCategories = [
   { 
     name: "Accessories", 
     path: "/Volleyball/accessories",
-    image: "/images/volleyball/accessories.jpg"
+    image: "https://images-cdn.ubuy.co.id/661cb8432617db239261181f-volleyball-knee-pads-volleyball-arm.jpg"
   },
   { 
     name: "Balls", 
     path: "/Volleyball/balls",
-    image: "/images/volleyball/balls.jpg"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPkyRz0pNFjy4bQwD7w2i7G0Vbi5eeU1SLvw&s"
   },
   { 
     name: "Footwear", 
     path: "/Volleyball/footwear",
-    image: "/images/volleyball/footwear.jpg"
+    image: "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/25796336/2024/2/16/334b2a62-8c65-454b-ad16-245320aee9d41708082186404-ASICS-Men-Woven-Design-Round-Toe-Gel-Task-3-Volleyball-Shoes-1.jpg"
   },
   { 
     name: "Socks", 
     path: "/Volleyball/socks",
-    image: "/images/volleyball/socks.jpg"
+    image: "https://m.media-amazon.com/images/I/612dRJwrcfL._UY1100_.jpg"
   },
   { 
     name: "Knee Pads", 
     path: "/Volleyball/kneepads",
-    image: "/images/volleyball/kneepads.jpg"
+    image: "https://m.media-amazon.com/images/I/81Os0w1GzpL.jpg"
   },
   { 
     name: "Teamwear", 
     path: "/Volleyball/teamwear",
-    image: "/images/volleyball/teamwear.jpg"
+    image: "https://image.made-in-china.com/365f3j00PGckRMNyLzbd/Custom-Sublimation-Polyester-Quick-Dry-Sports-Sportswear-Wholesale-Sleeveless-Volleyball-Jersey-Badminton-T-Shirt-Volleyball-Uniform-Teamwear.webp"
   },
-  { 
-    name: "Nets & Posts", 
-    path: "/Volleyball/nets-posts",
-    image: "/images/volleyball/nets.jpg"
-  },
+ 
 ];
 
 const newLaunches = [
   {
-    name: "Pro Volleyball Shoe",
+    name: "Pro Volleyball Shoes",
     price: "₹3,499",
-    image: "/images/volleyball/new1.jpg"
-  },
+    image: "https://m.media-amazon.com/images/I/81Vm0NpOPUL._UY1000_.jpg"
+  },  
   {
-    name: "Elite Volleyball",
+    name: "Elite Volleyball Shoes",
     price: "₹2,199",
-    image: "/images/volleyball/new2.jpg"
+    image: "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30166470/2024/7/10/42329144-3df9-425a-9ac2-8547b8b5a3711720593421438ASICSSKYELITEFFMT3PARISMenVolleyballSportsShoes1.jpg"
   },
   {
     name: "Premium Knee Pads",
     price: "₹1,299",
-    image: "/images/volleyball/new3.jpg"
+    image: "https://rukminim2.flixcart.com/image/704/844/xif0q/support/f/k/v/na-premium-knee-cap-knee-brace-for-knee-pain-relief-knee-pad-leg-original-imah9m9f9tgzbzcy.jpeg?q=90&crop=false"
   },
   {
     name: "Team Jersey Set",
     price: "₹2,999",
-    image: "/images/volleyball/new4.jpg"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyOnwAp0-rf2Cc_pai3QmLcJrCI7JZT1_JlQ&s"
   }
 ];
 
 const shopByLevel = [
   {
     title: "Beginner",
-    image: "/images/volleyball/beginner.jpg"
+    image: "https://m.media-amazon.com/images/I/51kjKu6AVDL._UF894,1000_QL80_.jpg"
   },
   {
     title: "Intermediate",
-    image: "/images/volleyball/intermediate.jpg"
+    image: "https://sportraffic.com/wp-content/uploads/2019/05/Mikasa-V200W-Indoor-Ball.jpg"
   },
   {
     title: "Professional",
-    image: "/images/volleyball/professional.jpg"
+    image: "https://m.media-amazon.com/images/I/61hPSHy1VVL.jpg"
   }
 ];
 
@@ -96,7 +92,7 @@ const VolleyballMain = () => {
       {/* Subcategories Grid */}
       <section>
       <h1 className="text-3xl font-bold text-center my-8">Volleyball Categories</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+      <div className="grid ml-10 grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-5">
           {volleyballCategories.map((sub, index) => (
             <div
               key={index}
@@ -165,42 +161,68 @@ const VolleyballMain = () => {
           </Swiper>
         </div>
 
-      {/* Blog Section */}
-      <section className="py-6 px-4">
-        <h2 className="text-2xl font-bold mb-4">Blogs</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Volleyball Training Tips for Power and Agility",
-              date: "July 15, 2025",
-              image: "blog1.png",
-              desc: "Boost your jumping power and reaction time with these training hacks.",
-            },
-            {
-              title: "Choosing the Right Volleyball Gear",
-              date: "June 29, 2025",
-              image: "blog2.png",
-              desc: "From knee pads to pro-level shoes, know what works best for you.",
-            },
-            {
-              title: "How to Maintain Your Volleyball Shoes",
-              date: "May 22, 2025",
-              image: "blog3.png",
-              desc: "Simple cleaning and care techniques for long-lasting grip.",
-            },
-          ].map((blog, i) => (
-            <div key={i} className="bg-white rounded-lg shadow">
-              <img src={`/assets/volleyball/${blog.image}`} alt={blog.title} className="rounded-t-lg" />
-              <div className="p-4">
-                <h3 className="font-semibold text-md">{blog.title}</h3>
-                <p className="text-gray-600 text-sm">{blog.date}</p>
-                <p className="mt-2 text-sm">{blog.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+                {/* BLOG SECTION */}
+<div className="px-4 md:px-8 mt-20">
+  <h2 className="text-3xl font-bold mb-8 text-center">BLOGS</h2>
 
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {/* Blog 1 */}
+    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+      <img
+        src="https://sportsedtv.com/img/blog/rules-of-pickleball-101_162cdbfe92b188.png"
+        alt="Pickleball Rules"
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold mb-1">Pickleball Rules That Slap (So You Don’t)</h3>
+        <p className="text-sm text-gray-500 mb-2">July 9, 2025</p>
+        <p className="text-gray-700 text-sm mb-3">
+          First time on the court? Cool. Let’s get you up to speed. Pickleball’s not just a fad — it’s blowing up. It's fast...
+        </p>
+        <p className="text-blue-600 font-semibold cursor-pointer">Continue Reading →</p>
+      </div>
+    </div>
+
+    {/* Blog 2 */}
+    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+      <img
+        src="https://www.niviasports.com/cdn/shop/articles/How_to_Choose_the_Perfect_Yoga_Mat_for_Your_Body_Practice_Progress_600X406_89dbd000-fc5e-47c6-ad95-5f057742cc01_1024x1024.jpg?v=1748523608"
+        alt="Yoga Mat"
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold mb-1">
+          Grounded in Grace: How to Choose the Perfect Yoga Mat
+        </h3>
+        <p className="text-sm text-gray-500 mb-2">May 29, 2025</p>
+        <p className="text-gray-700 text-sm mb-3">
+          Because the right mat isn’t just support — it’s your foundation. Whether you're flowing through sun salutations...
+        </p>
+        <p className="text-blue-600 font-semibold cursor-pointer">Continue Reading →</p>
+      </div>
+    </div>
+
+    {/* Blog 3 */}
+    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+      <img
+        src="https://www.niviasports.com/cdn/shop/articles/How_to_Maintain_Your_Football_Shoes_Cleaning_Storage_Tips_for_Long_Life_600X406_614f8e4f-b950-4797-bda6-41917f63d6b8.jpg?v=1748521299"
+        alt="Football Shoes Maintenance"
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold mb-1">
+          🧼 How to Maintain volleyball Shoes: Cleaning & Storage Tips for Long Life 🥇
+        </h3>
+        <p className="text-sm text-gray-500 mb-2">May 29, 2025</p>
+        <p className="text-gray-700 text-sm mb-3">
+          Your volleyball shoes are more than gear—they're your game-day allies. They grip, pivot, and blast with you...
+        </p>
+        <p className="text-blue-600 font-semibold cursor-pointer">Continue Reading →</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br /><br />
       <Footer />
     </div>
   );
