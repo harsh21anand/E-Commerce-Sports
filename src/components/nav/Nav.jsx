@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/react.svg";
+import logo from "../../assets/logo1234.png";
 import { FiShoppingCart } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 import { FaUserAlt, FaBars } from "react-icons/fa";
@@ -250,8 +250,8 @@ function Nav() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-         <img src={logo} alt="Logo" className="h-8 w-8" />
-         <h1 className="text-xl font-bold">Sports_Hub</h1>
+         <img src={logo} alt="Logo" className="h-12 w-30 " />
+         
         </Link>
 
 

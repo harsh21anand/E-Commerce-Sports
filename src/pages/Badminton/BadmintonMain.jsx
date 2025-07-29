@@ -9,42 +9,42 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 const subcategories = [
-  { name: "Accessories", path: "/badminton/accessories", image: "/images/badminton/accessories.jpg" },
-  { name: "Apparels", path: "/badminton/apparels", image: "/images/badminton/apparels.jpg" },
-  { name: "Bags", path: "/badminton/bags", image: "/images/badminton/bags.jpg" },
-  { name: "Footwears", path: "/badminton/footwears", image: "/images/badminton/footwears.jpg" },
-  { name: "Socks", path: "/badminton/socks", image: "/images/badminton/socks.jpg" },
-  { name: "Rackets", path: "/badminton/rackets", image: "/images/badminton/rackets.jpg" },
-  { name: "Shuttles", path: "/badminton/shuttles", image: "/images/badminton/shuttles.jpg" },
+  { name: "Accessories", path: "/badminton/accessories", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvv5ULgMjMh30yTjss5qFNgfcv_bBblKuxsQ&s" },
+  { name: "Apparels", path: "/badminton/apparels", image: "https://scssports.in/cdn/shop/files/ynts2462dp_1.jpg?v=1718968420" },
+  { name: "Bags", path: "/badminton/bags", image: "https://m.media-amazon.com/images/I/41UQeMhOGPL._SR290,290_.jpg" },
+  { name: "Footwears", path: "/badminton/footwears", image: "https://www.kdclick.com/s/637763a5ea78e200824eb640/6582ebb8a40f70b19f173da7/131-640x640.jpg" },
+  { name: "Socks", path: "/badminton/socks", image: "https://images-cdn.ubuy.co.in/66a04a0b8581cc51951624d0-4-pairs-yonex-jp-3d-ergo-quarter-socks.jpg" },
+  { name: "Rackets", path: "/badminton/rackets", image: "https://m.media-amazon.com/images/I/719j2lzLn2L.jpg" },
+  { name: "Shuttles", path: "/badminton/shuttles", image: "https://images-cdn.ubuy.co.in/635ea0ab8291e45c563e6cd6-12pcs-nylon-feather-badminton-ball.jpg" },
 ];
 
 const newLaunches = [
   {
     name: "Graphite Series Racket",
     price: "₹2,499",
-    image: "/images/badminton/new1.jpg",
+    image: "https://m.media-amazon.com/images/I/511sWySYxfL._UF894,1000_QL80_.jpg",
   },
   {
     name: "Power Feather Shuttle",
     price: "₹799",
-    image: "/images/badminton/new2.jpg",
+    image: "https://m.media-amazon.com/images/I/516ydCuDiSL._UF894,1000_QL80_.jpg",
   },
   {
     name: "Ace Pro Badminton Shoes",
     price: "₹1,999",
-    image: "/images/badminton/new3.jpg",
+    image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/s/o/i/12-hbfs-3m001-12-hundred-black-red-original-imagsrk2qmsgrvuj.jpeg?q=90&crop=false",
   },
   {
     name: "Classic Pro Bag",
     price: "₹899",
-    image: "/images/badminton/new4.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLChJVGH1IzPktqZgV_1I3ZvOJoowuz2paQg&s",
   },
 ];
 
 const shopByLevel = [
-  { title: "Beginner", image: "/images/badminton/level1.jpg" },
-  { title: "Intermediate", image: "/images/badminton/level2.jpg" },
-  { title: "Advanced", image: "/images/badminton/level3.jpg" },
+  { title: "Beginner", image: "https://m.media-amazon.com/images/I/61pCwWPFYdL._UF894,1000_QL80_.jpg" },
+  { title: "Intermediate", image: "https://5.imimg.com/data5/SELLER/Default/2023/6/313833033/VB/ES/JL/67146031/61qkijyqt5l-sx466--500x500.jpg" },
+  { title: "Advanced", image: "https://eveen.pk/cdn/shop/products/image_9282225c-ecf6-435a-b9c1-3c1e33af1ac3.jpg?v=1714156150" },
 ];
 
 const blogs = [
@@ -52,21 +52,21 @@ const blogs = [
     title: "Choosing the Right Racket",
     date: "July 1, 2025",
     description: "Find the perfect racket based on your playing style and level.",
-    image: "/images/badminton/blog1.jpg",
+    image: "https://sportsedtv.com/img/blog/rules-of-pickleball-101_162cdbfe92b188.png",
     link: "#",
   },
   {
     title: "Improve Footwork in Badminton",
     date: "June 15, 2025",
     description: "Master movement drills for greater court coverage.",
-    image: "/images/badminton/blog2.jpg",
+    image: "https://www.niviasports.com/cdn/shop/articles/How_to_Choose_the_Perfect_Yoga_Mat_for_Your_Body_Practice_Progress_600X406_89dbd000-fc5e-47c6-ad95-5f057742cc01_1024x1024.jpg?v=1748523608",
     link: "#",
   },
   {
     title: "Shuttle Types Explained",
     date: "May 25, 2025",
     description: "Know when to use feathered vs synthetic shuttles.",
-    image: "/images/badminton/blog3.jpg",
+    image: "https://www.niviasports.com/cdn/shop/articles/How_to_Maintain_Your_Football_Shoes_Cleaning_Storage_Tips_for_Long_Life_600X406_614f8e4f-b950-4797-bda6-41917f63d6b8.jpg?v=1748521299",
     link: "#",
   },
 ];
@@ -90,7 +90,9 @@ const BadmintonMain = () => {
               onClick={() => navigate(cat.path)}
             >
               <img src={cat.image} alt={cat.name} className="w-full h-28 object-cover rounded-md" />
-              <p className="mt-2 font-semibold">{cat.name}</p>
+               <div className="p-4 bg-gray-100">
+                <h3 className="text-lg font-semibold text-center">{cat.name}</h3>
+              </div>
             </div>
           ))}
         </div>

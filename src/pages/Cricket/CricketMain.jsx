@@ -10,28 +10,28 @@ import "swiper/css/navigation";
 
 // Subcategories
 const subcategories = [
-  { name: "Accessories", path: "/cricket/accessories", image: "/images/cricket/accessories.jpg" },
-  { name: "Bats", path: "/cricket/bats", image: "/images/cricket/bats.jpg" },
-  { name: "Balls", path: "/cricket/balls", image: "/images/cricket/balls.jpg" },
-  { name: "Footwear", path: "/cricket/footwear", image: "/images/cricket/footwear.jpg" },
-  { name: "Bags", path: "/cricket/bags", image: "/images/cricket/bags.jpg" },
-  { name: "Apparels", path: "/cricket/apparels", image: "/images/cricket/apparels.jpg" },
-  { name: "Gloves", path: "/cricket/gloves", image: "/images/cricket/gloves.jpg" },
+  { name: "Accessories", path: "/cricket/accessories", image: "https://i.pinimg.com/736x/e5/1d/3c/e51d3c494a616f03cb100fca3c0ba00c.jpg" },
+  { name: "Bats", path: "/cricket/bats", image: "https://cdnmedia.dsc-cricket.com/media/catalog/product/cache/5b0ea239e50527b43e3253a7f103e237/d/s/dsc-cricket-blu--english-willow-player-edition-bat-bat-2.webp" },
+  { name: "Balls", path: "/cricket/balls", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWSK22lkmLNlDP0T7DrYsNAE--rqWy6uSHJA&s" },
+  { name: "Footwear", path: "/cricket/footwear", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RQjzUZK01z5MR6i0XY4wY4JpcVbhPTc6HA&s" },
+  { name: "Bags", path: "/cricket/bags", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcVPTR2_pJC7ZNSDdq8_bAgnX8AdYivgQO4A&s" },
+  { name: "Apparels", path: "/cricket/apparels", image: "https://5.imimg.com/data5/SELLER/Default/2023/12/370702495/HN/NW/BZ/3917006/cricket-set-apparels-250x250.jpg" },
+  { name: "Gloves", path: "/cricket/gloves", image: "https://shop.teamsg.in/cdn/shop/files/2_5f3c2213-1401-4d7e-b569-ccb4ae1f5df5.png?v=1742628027&width=1946" },
 ];
 
 // New Launches
 const newLaunches = [
-  { name: "Power Drive Bat", price: "₹3,299", image: "/images/cricket/new1.jpg" },
-  { name: "Turf Grip Shoes", price: "₹2,499", image: "/images/cricket/new2.jpg" },
-  { name: "All-Rounder Kit Bag", price: "₹1,699", image: "/images/cricket/new3.jpg" },
-  { name: "Training Apparel Set", price: "₹1,099", image: "/images/cricket/new4.jpg" },
+  { name: "Power Drive Bat", price: "₹3,299", image: "https://romjee.com/cdn/shop/files/510-RUijYlL._SL1279.jpg?v=1735814106" },
+  { name: "Turf Grip Shoes", price: "₹2,499", image: "https://m.media-amazon.com/images/I/81lRq3r28AL._UY1000_.jpg" },
+  { name: "All-Rounder Kit Bag", price: "₹1,699", image: "https://dpazadsports.com/wp-content/uploads/2023/07/Premium-Kit-Bag-a.jpg" },
+  { name: "Training Apparel Set", price: "₹1,099", image: "https://bonsaicricket.nl/dosti/wp-content/uploads/2022/02/TRAINING-SET-TRAINING-SHIRT.jpg" },
 ];
 
 // Shop by Level
 const shopByLevel = [
-  { title: "Beginner", image: "/images/cricket/level1.jpg" },
-  { title: "Intermediate", image: "/images/cricket/level2.jpg" },
-  { title: "Advanced", image: "/images/cricket/level3.jpg" },
+  { title: "Beginner", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtoYUuSko1pLz3ysTAbjJkFVSRegrzWud8A&s" },
+  { title: "Intermediate", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtoYUuSko1pLz3ysTAbjJkFVSRegrzWud8A&s" },
+  { title: "Advanced", image: "https://shop.teamsg.in/cdn/shop/files/2_1c95c06a-e663-490d-8752-ec96ce811f5e.png?v=1720092464&width=1946" },
 ];
 
 // Blogs
@@ -40,21 +40,21 @@ const blogs = [
     title: "Top 5 Cricket Bats in 2025",
     date: "July 5, 2025",
     description: "Explore the best-performing bats trusted by professionals and beginners alike.",
-    image: "/images/cricket/blog1.jpg",
+    image: "https://sportsedtv.com/img/blog/rules-of-pickleball-101_162cdbfe92b188.png",
     link: "#",
   },
   {
     title: "Choosing the Right Footwear",
     date: "June 15, 2025",
     description: "Understand how spikes and rubber soles affect performance and grip.",
-    image: "/images/cricket/blog2.jpg",
+    image: "https://www.niviasports.com/cdn/shop/articles/How_to_Choose_the_Perfect_Yoga_Mat_for_Your_Body_Practice_Progress_600X406_89dbd000-fc5e-47c6-ad95-5f057742cc01_1024x1024.jpg?v=1748523608",
     link: "#",
   },
   {
     title: "Cricket Training at Home",
     date: "May 25, 2025",
     description: "Top drills and equipment to train for cricket effectively at home.",
-    image: "/images/cricket/blog3.jpg",
+    image: "https://www.niviasports.com/cdn/shop/articles/How_to_Maintain_Your_Football_Shoes_Cleaning_Storage_Tips_for_Long_Life_600X406_614f8e4f-b950-4797-bda6-41917f63d6b8.jpg?v=1748521299",
     link: "#",
   },
 ];
@@ -77,8 +77,10 @@ const CricketMain = () => {
               className="cursor-pointer text-center hover:scale-105 transition-all duration-300"
               onClick={() => navigate(cat.path)}
             >
-              <img src={cat.image} alt={cat.name} className="w-full h-28 object-cover rounded-md" />
-              <p className="mt-2 font-semibold">{cat.name}</p>
+              <img src={cat.image} alt={cat.name} className="w-full h-35 center  object-cover rounded-md" />
+             <div className="p-4 bg-gray-100">
+                <h3 className="text-lg font-semibold text-center">{cat.name}</h3>
+              </div>
             </div>
           ))}
         </div>

@@ -32,8 +32,8 @@ const shopByLevel = [
 const newLaunches = [
   { name: "Pro Spin Racket", price: "₹2,899", image: "https://m.media-amazon.com/images/I/71olffELYCL.jpg" },
   { name: "Control Tennis Ball", price: "₹499", image: "https://m.media-amazon.com/images/I/81Zf3XF9mmL.jpg" },
-  { name: "Performance Footwear", price: "₹2,199", image: "https://i.ebayimg.com/images/g/i-MAAOSwC55ljLKh/s-l500.jpg" },
-  { name: "Durable Kit Bag", price: "₹1,199", image: "https://m.media-amazon.com/images/I/91marzNd0DL._UF894,1000_QL80_.jpg" },
+  { name: "Performance Footwear", price: "₹2,199", image: "https://images-cdn.ubuy.co.in/65a14312beece127cf5404b9-asics-tennis-shoes-prestigelyte-ac.jpg" },
+  { name: "Durable Kit Bag", price: "₹1,199", image: "https://m.media-amazon.com/images/I/61lrZvTP9XL.jpg" },
 ];
 
 
@@ -57,7 +57,7 @@ const TennisMain = () => {
               className="cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
               onClick={() => navigate(cat.path)}
             >
-              <img src={cat.image} alt={cat.name} className="w-full h-28 object-cover rounded-md" />
+              <img src={cat.image} alt={cat.name} className="w-full h-28 object-cover overflow-hidden rounded-md" />
               <div className="p-4 bg-gray-100">
                 <h3 className="text-lg font-semibold text-center">{cat.name}</h3>
               </div>
@@ -98,7 +98,7 @@ const TennisMain = () => {
           {newLaunches.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="bg-white rounded-lg shadow-md p-3">
-                <img src={item.image} alt={item.name} className="w-full h-48 object-cover rounded-md" />
+                <img src={item.image} alt={item.name} className="w-full h-48 object-cover overflow-hidden rounded-md" />
                 <div className="mt-3">
                   <h3 className="text-md font-semibold">{item.name}</h3>
                   <p className="text-red-600 font-bold">{item.price}</p>
