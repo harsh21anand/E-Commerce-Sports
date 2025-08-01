@@ -233,7 +233,8 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden">
+    // i change here   from this    flex flex-col min-h-screen overflow-x-hidden
+    <div className="pt-18 bg-gray-100 min-h-screen">
       <Header />
       <Navbar />
 
@@ -265,7 +266,7 @@ const Home = () => {
 
       <main className="flex-grow py-10 bg-white">
         <section className="py-12 bg-white">
-          <h3 className="text-3xl font-bold text-center mb-8 text-black">Shop By Category</h3>
+          <h3 className="text-5xl font-extrabold text-center mb-8 text-black">Shop By Category</h3>
           <div className="container mx-auto px-4">
             <Swiper
   modules={[Navigation]}

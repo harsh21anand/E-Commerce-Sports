@@ -246,7 +246,8 @@ function Nav() {
   };
 
   return (
-    <nav className="bg-gray-900 text-white shadow relative z-50">
+    <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow z-50">
+
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
