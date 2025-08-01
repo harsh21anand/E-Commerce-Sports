@@ -63,18 +63,8 @@ function Footer() {
 
         {/* Right: Affiliations & Contact */}
         <div className="md:w-1/3 flex flex-col md:flex-row md:justify-between">
-          {/* Affiliations */}
-          <div>
-            <h3 className="font-bold mb-4">Sports_Hub AFFILIATIONS</h3>
-            <ul className="space-y-1">
-              <li><a href="#" className="hover:text-red-600">AIFF</a></li>
-              <li><a href="#" className="hover:text-red-600">ISL</a></li>
-              <li><a href="#" className="hover:text-red-600">Bhutan Football Federation</a></li>
-              <li><a href="#" className="hover:text-red-600">Srilankan Football Federation</a></li>
-              <li><a href="#" className="hover:text-red-600">BFI</a></li>
-              <li><a href="#" className="hover:text-red-600">VFI</a></li>
-            </ul>
-          </div>
+        
+          
 
           {/* Contact */}
           <div className="mt-6 md:mt-0">

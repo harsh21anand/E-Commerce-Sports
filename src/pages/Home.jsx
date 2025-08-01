@@ -11,6 +11,9 @@ import { Navigation } from "swiper/modules";
 import Footer from "../components/footer/Footer";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Pagination } from 'swiper/modules';
+import "swiper/css/bundle";
 
 const categories = [
   {
@@ -46,6 +49,71 @@ const categories = [
     title: "RUNNING",
   },
 ];
+
+// Rule The Court Section
+
+
+  const cardData = [
+  {
+    heading: "BAD\nMIN\nTON",
+    img: "/pngtree-badminton-sport- (2).png",
+  },
+  {
+    heading: "",
+    img: "https://us.123rf.com/450wm/djvstock/djvstock2307/djvstock230701024/209038280-modern-sports-shoe-in-blue-and-black-for-athletic-fashion-generated-by-artificial-intelligence.jpg?ver=6",
+  },
+  {
+    heading: "CR\nICK\nET",
+    img: "/badminton-silhouette.png",
+  },
+  {
+    heading: "",
+    img: "https://images.prodirectsport.com/ProductImages/Gallery_1/V3_1_Gallery_1_0217671.jpg",
+  },
+];
+
+const renderCard = (item, index) => (
+  <div
+    key={index}
+    className="relative bg-black rounded-lg flex flex-col items-center justify-between py-10 px-6 min-h-[500px]"
+  >
+    {item.heading ? (
+      <div className="text-center">
+        <h2 className="text-white text-2xl font-extrabold mb-2">
+          RULE<br />THE COURT
+        </h2>
+        <div className="relative">
+          <span
+            className="block text-[64px] font-extrabold text-transparent leading-none tracking-tight select-none"
+            style={{
+              WebkitTextStroke: "2px white",
+              letterSpacing: "-0.05em",
+            }}
+          >
+            {item.heading.split("\n").map((line, idx) => (
+              <div key={idx}>{line}</div>
+            ))}
+          </span>
+          <img
+            src={item.img}
+            alt="Sport"
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-60 object-contain pointer-events-none z-10"
+          />
+        </div>
+      </div>
+    ) : (
+      <img
+        src={item.img}
+        alt="Shoe"
+        className="w-full h-80 object-contain"
+      />
+    )}
+    <button className="mt-8 px-8 py-3 bg-red-600 text-white font-bold text-xl rounded shadow hover:bg-red-700 transition">
+      SHOP NOW
+    </button>
+  </div>
+);
+
 
 // for Best selling section
 const shoes_categories = [
@@ -193,158 +261,161 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Hero Banner */}
+      {/* ------- Shop By Category ------*/}
+
       <main className="flex-grow py-10 bg-white">
         <section className="py-12 bg-white">
           <h3 className="text-3xl font-bold text-center mb-8 text-black">Shop By Category</h3>
           <div className="container mx-auto px-4">
             <Swiper
-              modules={[Navigation]}
-              navigation
-              spaceBetween={32}
-              slidesPerView={4}
-              breakpoints={{
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-                1280: { slidesPerView: 4 },
-              }}
-            >
-              {categories.map((cat, idx) => (
-                <SwiperSlide key={idx}>
-                  <CategoryCard
-                    image={cat.image}
-                    title={cat.title}
-                    onClick={() => handleCategoryClick(cat.title)}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+  modules={[Navigation]}
+  navigation
+  spaceBetween={16} // 
+  slidesPerView={1}
+  breakpoints={{
+    640: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+    1280: { slidesPerView: 4 },
+  }}
+>
+  {categories.map((cat, idx) => (
+    <SwiperSlide key={idx}>
+      <CategoryCard
+        image={cat.image}
+        title={cat.title}
+        onClick={() => handleCategoryClick(cat.title)}
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
           </div>
         </section>
+       
+       {/* Best Sellers Section */}
+  <section className="container mx-auto px-4 py-13">
+  <div className="flex flex-col lg:flex-row items-start">
+    {/* Left Content */}
+    <div className="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-left leading-tight text-black">
+        Best Sellers
+      </h1>
+      <p className="text-xl text-left mb-2 leading-tight text-black">
+        Sports Gear, Footwear & Accessories
+      </p>
+      <p className="text-lg font-extrabold text-left mb-8 tracking-wide text-orange-400 cursor-pointer">
+        EXPLORE ALL
+      </p>
+    </div>
 
-        {/* Shoes Categories Section */}
-        <section className="container mx-auto px-4 py-13 flex flex-col lg:flex-row items-start overflow-x-hidden">
-          <div className="flex-1 min-w-[320px] max-w-[400px] pl-6">
-            <h1 className="text-6xl font-extrabold text-left mb-2 leading-tight text-black">Best Sellers</h1>
-            <p className="text-xl text-left mb-2 leading-tight text-black">Sports Gear, Footwear & Accessories</p>
-            <p className="text-lg font-extrabold text-left mb-8 tracking-wide text-orange-400">EXPLORE ALL</p>
-          </div>
-          <div className="flex-[2] w-full overflow-x-hidden">
-            <Swiper
-              modules={[Navigation]}
-              navigation
-              spaceBetween={32}
-              slidesPerView={3}
-              breakpoints={{
-                640: { slidesPerView: 1 },
-                1024: { slidesPerView: 2 },
-                1280: { slidesPerView: 3 },
-              }}
-            >
-              {shoes_categories
-                .filter((prod) => prod.image && prod.title && prod.cost)
-                .map((prod, idx) => (
-                  <SwiperSlide key={idx}>
-                    <ProductCard
-                      image={prod.image}
-                      title={prod.title}
-                      cost={prod.cost}
-                      onClick={() => handleBestSellerClick(prod.title)}
-                    />
-                  </SwiperSlide>
-                ))}
-            </Swiper>
-          </div>
-        </section>
+    {/* Swiper slide  Section */}
+   
+   
+     <div className="w-full lg:w-2/3">
 
-        <section className="container mx-auto px-4 py-13 grid grid-cols-4 md:grid-cols-4 gap-8">
-          <div className="relative bg-black rounded-lg flex flex-col items-center justify-between py-10 px-6 min-h-[500px]">
-            <div className="text-center">
-              <h2 className="text-white text-2xl font-extrabold mb-2">RULE<br />THE COURT</h2>
-              <div className="relative">
-                <span className="block text-[64px] font-extrabold text-transparent stroke-white stroke-2 leading-none tracking-tight select-none" style={{ WebkitTextStroke: '2px white', letterSpacing: '-0.05em' }}>
-                  BAD<br />MIN<br />TON
-                </span>
-                <img
-                  src="/pngtree-badminton-sport- (2).png"
-                  alt="Badminton Silhouette"
-                  className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-60 object-contain pointer-events-none"
-                  style={{ zIndex: 1 }}
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        spaceBetween={20}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {shoes_categories
+          .filter((prod) => prod.image && prod.title && prod.cost)
+          .map((prod, idx) => (
+           <SwiperSlide key={idx} >
+  <div className="px-2 h-full flex justify-center items-center">
+    <ProductCard
+      image={prod.image}
+      title={prod.title}
+      cost={prod.cost}
+      onClick={() => handleBestSellerClick(prod.title)}
+    />
+  </div>
+</SwiperSlide>
+
+ ))}
+      </Swiper>
+    </div>
+  </div>
+</section>
+
+
+    {/* ---------- Rule the Court Section ---------- */}
+    <section className="container mx-auto px-4 py-12">
+        <h2 className="text-4xl font-bold text-center mb-6">Rule The Court</h2>
+
+        {/* Mobile Swiper with Navigation */}
+        <div className="block md:hidden relative">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            pagination={{ clickable: true }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+          >
+            {cardData.map((card, idx) => (
+              <SwiperSlide key={idx}>{renderCard(card, idx)}</SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Desktop Grid Layout */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {cardData.map((card, idx) => renderCard(card, idx))}
+        </div>
+      </section>
+    
+  
+
+        {/* ----------Clearance Section ---------*/}
+<section className="container mx-auto px-4 py-12">
+  <div className="flex flex-col lg:flex-row items-start">
+    {/* Left Text Block */}
+    <div className="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-left leading-tight text-black">
+        CLEARANCE
+      </h1>
+      <p className="text-lg font-bold text-orange-500 mt-2">EXPLORE ALL</p>
+    </div>
+
+    {/* Swiper Slider Block */}
+    <div className="w-full lg:w-2/3">
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        spaceBetween={20}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {clearanceItems
+          .filter((prod) => prod.image && prod.title && prod.cost)
+          .map((prod, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="px-2 h-full flex justify-center items-center">
+                <ProductCard
+                  image={prod.image}
+                  title={prod.title}
+                  cost={prod.cost}
+                  onClick={() => handleShoesCategoriesClick(prod.title)}
                 />
               </div>
-            </div>
-            <button className="mt-8 px-8 py-3 bg-red-600 text-white font-bold text-xl rounded shadow hover:bg-red-700 transition">
-              SHOP NOW
-            </button>
-          </div>
-          <div className="bg-black rounded-lg flex items-center justify-center min-h-[500px]">
-            <img
-              src="https://us.123rf.com/450wm/djvstock/djvstock2307/djvstock230701024/209038280-modern-sports-shoe-in-blue-and-black-for-athletic-fashion-generated-by-artificial-intelligence.jpg?ver=6"
-              alt="Badminton Shoe"
-              className="w-96 h-120 object-contain"
-            />
-          </div>
-          <div className="relative bg-black rounded-lg flex flex-col items-center justify-between py-10 px-6 min-h-[500px]">
-            <div className="text-center">
-              <h2 className="text-white text-2xl font-extrabold mb-2">RULE<br />THE COURT</h2>
-              <div className="relative">
-                <span className="block text-[64px] font-extrabold text-transparent stroke-white stroke-2 leading-none tracking-tight select-none" style={{ WebkitTextStroke: '2px white', letterSpacing: '-0.05em' }}>
-                  CR<br />ICK<br />ET
-                </span>
-                <img
-                  src="/badminton-silhouette.png"
-                  alt="Badminton Silhouette"
-                  className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-60 object-contain pointer-events-none"
-                  style={{ zIndex: 1 }}
-                />
-              </div>
-            </div>
-            <button className="mt-8 px-8 py-3 bg-red-600 text-white font-bold text-xl rounded shadow hover:bg-red-700 transition">
-              SHOP NOW
-            </button>
-          </div>
-          <div className="bg-black rounded-lg flex items-center justify-center min-h-[500px]">
-            <img
-              src="https://images.prodirectsport.com/ProductImages/Gallery_1/V3_1_Gallery_1_0217671.jpg"
-              alt="Badminton Shoe"
-              className="w-96 h-80 object-contain"
-            />
-          </div>
-        </section>
+            </SwiperSlide>
+          ))}
+      </Swiper>
+    </div>
+  </div>
+</section>
 
-        <section className="container mx-auto px-4 py-13 flex flex-col lg:flex-row items-start overflow-x-hidden">
-          <div className="flex-1 min-w-[320px] max-w-[400px] pl-6">
-            <h1 className="text-6xl font-extrabold text-left mb-2 leading-tight text-black">CLEARANCE</h1>
-            <p className="text-lg font-bold text-left mb-8 tracking-wide text-orange-400" >EXPLORE ALL</p>
-          </div>
-          <div className="flex-[2] w-full overflow-x-hidden">
-            <Swiper
-              modules={[Navigation]}
-              navigation
-              spaceBetween={32}
-              slidesPerView={3}
-              breakpoints={{
-                640: { slidesPerView: 1 },
-                1024: { slidesPerView: 2 },
-                1280: { slidesPerView: 3 },
-              }}
-            >
-              {clearanceItems
-                .filter((prod) => prod.image && prod.title && prod.cost)
-                .map((prod, idx) => (
-                  <SwiperSlide key={idx}>
-                    <ProductCard
-                      image={prod.image}
-                      title={prod.title}
-                      cost={prod.cost}
-                      onClick={() => handleShoesCategoriesClick(prod.title)}
-                    />
-                  </SwiperSlide>
-                ))}
-            </Swiper>
-          </div>
-        </section>
-
+  {/*New Arrival section */}
         <section className="w-full bg-black py-13 mb-0">
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="flex-1 mb-10 md:mb-0">
@@ -355,16 +426,17 @@ const Home = () => {
               <h2 className="text-white text-[6vw] md:text-[5vw] lg:text-[5vw] font-extrabold leading-none mb-4 ml-10">ARRIVALS</h2>
               <button className="bg-white text-black font-bold text-lg px-4 py-2 ml-15 mt-2 shadow hover:bg-gray-200 transition">EXPLORE NOW</button>
             </div>
-            <div className="flex-1 ml-40 w-1/2">
+            <div className="w-full lg:w-2/3">
               <Swiper
                 modules={[Navigation]}
                 navigation
                 spaceBetween={20}
-                slidesPerView={3}
+                
                 breakpoints={{
+                  0: { slidesPerView: 1 },
                   640: { slidesPerView: 1 },
-                  1024: { slidesPerView: 2 },
-                  1280: { slidesPerView: 3 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 },
                 }}
               >
                 <SwiperSlide>
@@ -400,37 +472,37 @@ const Home = () => {
           </h2>
           <div className="flex flex-wrap justify-center gap-8">
             <img
-              src="/images/chennaiyin.png"
+              src="https://yt3.googleusercontent.com/R8tRxBqUAQIoBjLalPkdkVboj-muAoXAAImAHFVcVMgYavMX29sxasfa-4zeQLXXSC4gNzl0ng=s900-c-k-c0x00ffffff-no-rj"
               alt="Chennaiyin FC"
               className="w-24 md:w-28 lg:w-32 shadow-lg rounded"
             />
             <img
-              src="/images/bhutan.png"
+              src="https://yt3.googleusercontent.com/U2wOLb1Zs4dNhyydxQvIo9PjebtK2l-5YZ0f9zC8Y7g-jyMmCBcFCKrh6KWi2BYkIta5mFO4Gw=s900-c-k-c0x00ffffff-no-rj"
               alt="Bhutan Football Federation"
               className="w-24 md:w-28 lg:w-32 shadow-lg rounded"
             />
             <img
-              src="/images/jamshedpur.png"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Jamshedpur_FC_logo.svg/1200px-Jamshedpur_FC_logo.svg.png"
               alt="Jamshedpur FC"
               className="w-24 md:w-28 lg:w-32 shadow-lg rounded"
             />
             <img
-              src="/images/mohunbagan.png"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Mohun_Bagan_Super_Giant.svg/1200px-Mohun_Bagan_Super_Giant.svg.png"
               alt="Mohun Bagan Super Giant"
               className="w-24 md:w-28 lg:w-32 shadow-lg rounded"
             />
             <img
-              src="/images/sreenidi.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu0Pbp7yRHf0iXgsc6fYor2DzVBuXgP9UUPQ&s"
               alt="Sreenidi Deccan Football Club"
               className="w-24 md:w-28 lg:w-32 shadow-lg rounded"
             />
             <img
-              src="/images/realkashmir.png"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Real_Kashmir_FC.svg/1200px-Real_Kashmir_FC.svg.png"
               alt="Real Kashmir FC"
               className="w-24 md:w-28 lg:w-32 shadow-lg rounded"
             />
             <img
-              src="/images/churchill.png"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Churchill_Brothers.svg/1200px-Churchill_Brothers.svg.png"
               alt="Churchill Brothers FC"
               className="w-24 md:w-28 lg:w-32 shadow-lg rounded"
             />
