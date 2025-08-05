@@ -11,35 +11,34 @@ import { Navigation } from "swiper/modules";
 const volleyballCategories = [
   { 
     name: "Accessories", 
-    path: "/Volleyball/accessories",
+    path: "/volleyball/accessories",
     image: "https://images-cdn.ubuy.co.id/661cb8432617db239261181f-volleyball-knee-pads-volleyball-arm.jpg"
   },
   { 
     name: "Balls", 
-    path: "/Volleyball/balls",
+    path: "/volleyball/balls",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPkyRz0pNFjy4bQwD7w2i7G0Vbi5eeU1SLvw&s"
   },
   { 
     name: "Footwear", 
-    path: "/Volleyball/footwear",
+    path: "/volleyball/footwear",
     image: "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/25796336/2024/2/16/334b2a62-8c65-454b-ad16-245320aee9d41708082186404-ASICS-Men-Woven-Design-Round-Toe-Gel-Task-3-Volleyball-Shoes-1.jpg"
   },
   { 
     name: "Socks", 
-    path: "/Volleyball/socks",
+    path: "/volleyball/socks",
     image: "https://m.media-amazon.com/images/I/612dRJwrcfL._UY1100_.jpg"
   },
   { 
     name: "Knee Pads", 
-    path: "/Volleyball/kneepads",
+    path: "/volleyball/kneepads",
     image: "https://m.media-amazon.com/images/I/81Os0w1GzpL.jpg"
   },
   { 
     name: "Teamwear", 
-    path: "/Volleyball/teamwear",
+    path: "/volleyball/teamwear",
     image: "https://image.made-in-china.com/365f3j00PGckRMNyLzbd/Custom-Sublimation-Polyester-Quick-Dry-Sports-Sportswear-Wholesale-Sleeveless-Volleyball-Jersey-Badminton-T-Shirt-Volleyball-Uniform-Teamwear.webp"
   },
- 
 ];
 
 const newLaunches = [

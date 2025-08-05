@@ -12,7 +12,7 @@ const subcategories = [
   { name: "Accessories", path: "/badminton/accessories", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvv5ULgMjMh30yTjss5qFNgfcv_bBblKuxsQ&s" },
   { name: "Apparels", path: "/badminton/apparels", image: "https://scssports.in/cdn/shop/files/ynts2462dp_1.jpg?v=1718968420" },
   { name: "Bags", path: "/badminton/bags", image: "https://m.media-amazon.com/images/I/41UQeMhOGPL._SR290,290_.jpg" },
-  { name: "Footwears", path: "/badminton/footwears", image: "https://www.kdclick.com/s/637763a5ea78e200824eb640/6582ebb8a40f70b19f173da7/131-640x640.jpg" },
+  { name: "Footwear", path: "/badminton/footwear", image: "https://www.kdclick.com/s/637763a5ea78e200824eb640/6582ebb8a40f70b19f173da7/131-640x640.jpg" },
   { name: "Socks", path: "/badminton/socks", image: "https://images-cdn.ubuy.co.in/66a04a0b8581cc51951624d0-4-pairs-yonex-jp-3d-ergo-quarter-socks.jpg" },
   { name: "Rackets", path: "/badminton/rackets", image: "https://m.media-amazon.com/images/I/719j2lzLn2L.jpg" },
   { name: "Shuttles", path: "/badminton/shuttles", image: "https://images-cdn.ubuy.co.in/635ea0ab8291e45c563e6cd6-12pcs-nylon-feather-badminton-ball.jpg" },
@@ -81,7 +81,7 @@ const BadmintonMain = () => {
 
       {/* Subcategories */}
       <section className="px-6 py-10">
-        <h1 className="text-3xl font-bold mb-6 text-center">Explore Badminton Categories</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center"><br />Explore Badminton Categories</h1>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
           {subcategories.map((cat, index) => (
             <div

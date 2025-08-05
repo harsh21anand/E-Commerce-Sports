@@ -57,6 +57,8 @@ import BadmintonBags from "./pages/Badminton/Bags"; // Import Bags page
 import BadmintonApparels from "./pages/Badminton/Apparels"; // Import Apparels page
 import BadmintonSocks from "./pages/Badminton/Socks"; // Import Socks page
 import BadmintonAccessories from "./pages/Badminton/Accessories"; // Import Accessories page
+import BadmintonShuttles from "./pages/Badminton/Shuttles"; // Import Shuttles page
+import BadmintonRackets from "./pages/Badminton/Rackets"; // Import Rackets page
 import BadmintonMain from "./pages/Badminton/BadmintonMain"; // Import BadmintonMain page
 
 // Men
@@ -119,7 +121,7 @@ function App() {
           {/* <Route path="/categories" element={<CategoriesMain />} /> {/* CategoriesMain page */}
            
              {/* FootBall */}
-          <Route path="/Footballmain" element={<FootballMain />} /> {/* FootballMain page */}
+          <Route path="/Football" element={<FootballMain />} /> {/* FootballMain page */}
           <Route path="/FootBall/balls" element={<Ball />} /> {/* Ball page */}
           <Route path="/FootBall/footwear" element={<Footwear />} /> {/* Footwear page */}
           <Route path="/FootBall/bags" element={<Bags />} /> {/* Bags page */}
@@ -132,7 +134,7 @@ function App() {
           <Route path="/FootBall/accessories" element={<Accessories />} /> {/* Accessories page */}
          
          {/* BasketBall */}
-          <Route path="/BasketBallmain" element={<BasketBallMain />} /> {/* BasketBallMain page */}
+          <Route path="/BasketBall" element={<BasketBallMain />} /> {/* BasketBallMain page */}
           <Route path="/BasketBall/basketballs" element={<BasketBalls />} /> {/* Balls page */}
           <Route path="/BasketBall/basketballfootwear" element={<BasketBallFootwear />} /> {/* Footwear page */}
           <Route path="/BasketBall/basketballbags" element={<BasketBallBags />} /> {/* Bags page */}
@@ -142,13 +144,13 @@ function App() {
           <Route path="/BasketBall/basketballaccessories" element={<BasketBallAccessories />} /> {/* Accessories page */}
           
           {/* Volleyball */}
-          <Route path="/Volleyballmain" element={<VolleyballMain />} /> {/* VolleyballMain page */}
+          <Route path="/Volleyball" element={<VolleyballMain />} /> {/* VolleyballMain page */}
 
           {/* Turf */}
-          <Route path="/Turfmain" element={<TurfMain />} /> {/* TurfMain page */}
+          <Route path="/Turf" element={<TurfMain />} /> {/* TurfMain page */}
            
            {/* Tennis */}
-           <Route path="/Tennismain" element={<TennisMain />} /> {/* TennisMain page */}
+           <Route path="/Tennis" element={<TennisMain />} /> {/* TennisMain page */}
 
            {/* Cricket */}
            <Route path="/Cricketmain" element={<CricketMain />} /> {/* CricketMain page */}
@@ -158,12 +160,14 @@ function App() {
            
          
           {/* Badminton */}
-          <Route path="/Badmintonmain" element={<BadmintonMain />} /> {/* BadmintonMain page */}
-          <Route path="/Badminton/footwear" element={<BadmintonFootwear />} /> {/* Footwear page */}
-          <Route path="/Badminton/bags" element={<BadmintonBags />} /> {/* Bags page */}
-          <Route path="/Badminton/apparels" element={<BadmintonApparels />} /> {/* Apparels page */}
-          <Route path="/Badminton/socks" element={<BadmintonSocks />} /> {/* Socks page */}
-          <Route path="/Badminton/accessories" element={<BadmintonAccessories />} /> {/* Accessories page */}
+          <Route path="/badminton" element={<BadmintonMain />} /> {/* BadmintonMain page */}
+          <Route path="/badminton/footwear" element={<BadmintonFootwear />} /> {/* Footwear page */}
+          <Route path="/badminton/bags" element={<BadmintonBags />} /> {/* Bags page */}
+          <Route path="/badminton/apparels" element={<BadmintonApparels />} /> {/* Apparels page */}
+          <Route path="/badminton/socks" element={<BadmintonSocks />} /> {/* Socks page */}
+          <Route path="/badminton/accessories" element={<BadmintonAccessories />} /> {/* Accessories page */}
+          <Route path="/badminton/shuttles" element={<BadmintonShuttles />} /> {/* Shuttles page */}
+          <Route path="/badminton/rackets" element={<BadmintonRackets />} /> {/* Rackets page */}
           
           {/* Men */}
           <Route path="/Men/tshirts" element={<TShirts />} /> {/* TShirts page */}
@@ -207,7 +211,7 @@ function App() {
         <Route path="/buy1-get1" element={<Buy1Get1 />} /> {/* Buy1Get1 page */}
         <Route path="/flat50-off" element={<Flat50Off />} /> {/* Flat50Off page */}
         
-        {/* Additional routes to fix warnings */}
+        {/* Additional routes to fix warnings and handle URL variations */}
         <Route path="/balls" element={<Ball />} />
         <Route path="/footwear" element={<Footwear />} />
         <Route path="/goalkeeper-gloves" element={<GoalKeeper />} />
@@ -216,6 +220,24 @@ function App() {
         <Route path="/stockings" element={<Stocking />} />
         <Route path="/teamwear" element={<Teamwear />} />
         <Route path="/training-equipments" element={<TrainingEquipments />} />
+        
+        {/* Basketball routes with consistent URL pattern */}
+        <Route path="/basketball/teamwears" element={<BasketBallTeamwear />} />
+        <Route path="/basketball/teamwear" element={<BasketBallTeamwear />} />
+        <Route path="/basketball/accessories" element={<BasketBallAccessories />} />
+        <Route path="/basketball/bags" element={<BasketBallBags />} />
+        <Route path="/basketball/balls" element={<BasketBalls />} />
+        <Route path="/basketball/equipment" element={<BasketBallEquipments />} />
+        <Route path="/basketball/footwear" element={<BasketBallFootwear />} />
+        <Route path="/basketball/socks" element={<BasketBallSocks />} />
+        {/* End of Basketball routes */}
+        
+        {/* Redirect routes for case sensitivity and URL variations */}
+        <Route path="/football/goalkeeper" element={<GoalKeeper />} />
+        <Route path="/football/shinguards" element={<ShinGuards />} />
+        <Route path="/football/stocking" element={<Stocking />} />
+        <Route path="/football/stockings" element={<Stocking />} />
+        <Route path="/football/trainingequipments" element={<TrainingEquipments />} />
         {/* Football Routes */}
         <Route path="/football-accessories" element={<Accessories />} />
         <Route path="/shin-guards" element={<ShinGuards />} />

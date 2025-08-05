@@ -143,7 +143,7 @@ const GoalKeeper = () => {
         <Header />
         <Navbar />
      
-      <h1 className="text-3xl font-bold mb-8 text-center"> Football Goalkeeper Gloves</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center"> <br />Football Goalkeeper Gloves</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {goalkeeperItems.map((item, idx) => (
           <ShopCard

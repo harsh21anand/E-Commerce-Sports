@@ -17,7 +17,7 @@ import "swiper/css/bundle";
 
 const categories = [
   {
-    image: "https://forstarsports.com/wp-content/uploads/2023/08/soccer-equipment-List.jpg",
+    image: "https://media.gettyimages.com/id/184387667/photo/soccer-ball-and-boots-on-grass.jpg?s=612x612&w=gi&k=20&c=t0zTY0OpReSXFh4a6LZXO6zViDKygoLO-tmJsE3FsN4=",
     title: "FOOTBALL",
   },
   {
@@ -188,14 +188,14 @@ const Home = () => {
 
   const handleShoesCategoriesClick = (title) => {
     const pathMap = {
-      "FOOTBALL": "/footballmain",
-      "BASKETBALL": "/basketballmain",
-      "CRICKET": "/cricketmain",
-      "BADMINTON": "/badmintonmain",
-      "TENNIS": "/tennismain",
-      "VOLLEYBALL": "/volleyballmain",
-      "TURF": "/turfmain",
-      "RUNNING": "/runningmain",
+      "FOOTBALL": "/football",
+      "BASKETBALL": "/basketball",
+      "CRICKET": "/cricket",
+      "BADMINTON": "/badminton",
+      "TENNIS": "/tennis",
+      "VOLLEYBALL": "/volleyball",
+      "TURF": "/turf",
+      "RUNNING": "/running",
     };
 
     const path = pathMap[title];
@@ -208,21 +208,21 @@ const Home = () => {
 
   const handleCategoryClick = (title) => {
     if (title === "FOOTBALL") {
-      navigate("/Footballmain");
+      navigate("/football");
     } else if (title === "BASKETBALL") {
-      navigate("/BasketBallmain");
+      navigate("/basketball");
     } else if (title === "CRICKET") {
-      navigate("/Cricketmain");
+      navigate("/cricket");
     } else if (title === "BADMINTON") {
-      navigate("/Badmintonmain");
+      navigate("/badminton");
     } else if (title === "TENNIS") {
-      navigate("/Tennismain");
+      navigate("/tennis");
     } else if (title === "VOLLEYBALL") {
-      navigate("/Volleyballmain");
+      navigate("/volleyball");
     } else if (title === "TURF") {
-      navigate("/Turfmain");
+      navigate("/turf");
     } else if (title === "RUNNING") {
-      navigate("/Runningmain");
+      navigate("/running");
     } else {
       alert(`Clicked on ${title}`);
     }
@@ -269,27 +269,27 @@ const Home = () => {
           <h3 className="text-5xl font-extrabold text-center mb-8 text-black">Shop By Category</h3>
           <div className="container mx-auto px-4">
             <Swiper
-  modules={[Navigation]}
-  navigation
-  spaceBetween={16} // 
-  slidesPerView={1}
-  breakpoints={{
-    640: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-    1280: { slidesPerView: 4 },
-  }}
->
-  {categories.map((cat, idx) => (
-    <SwiperSlide key={idx}>
-      <CategoryCard
-        image={cat.image}
-        title={cat.title}
-        onClick={() => handleCategoryClick(cat.title)}
-      />
-    </SwiperSlide>
-  ))}
-</Swiper>
+              modules={[Navigation]}
+             navigation
+                spaceBetween={16} // 
+              slidesPerView={1}
+            breakpoints={{
+               640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+        >
+            {categories.map((cat, idx) => (
+              <SwiperSlide key={idx}>
+                <CategoryCard
+                  image={cat.image}
+                  title={cat.title}
+                  onClick={() => handleCategoryClick(cat.title)}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
           </div>
         </section>
        

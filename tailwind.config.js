@@ -8,6 +8,7 @@ module.exports = {
         sky: colors.sky,
         slate: colors.slate,
       },
+      
     },
   },
   plugins: [],
