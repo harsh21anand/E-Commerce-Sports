@@ -20,12 +20,11 @@ const Offers = () => {
        <Navbar />
      
       
-      
-      {/* Clearance Sale Section */}
-      <div 
+  {/* Clearance Sale Section */}
+  <div 
         className={`${offerSectionClasses}`}
         style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(https://www.shutterstock.com/image-vector/clearance-header-banner-template-promotion-260nw-2100113311.jpg)'
         }}
       >
         <div className={offerContentClasses}>
@@ -37,11 +36,14 @@ const Offers = () => {
         </div>
       </div>
 
+
+
+
       {/* Buy 1 Get 1 Section */}
       <div 
         className={`${offerSectionClasses}`}
         style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1519764622345-2347931d7d21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(https://png.pngtree.com/thumb_back/fh260/background/20211128/pngtree-buy-one-get-free-banner-image_917768.png)'
         }}
       >
         <div className={offerContentClasses}>
@@ -57,7 +59,7 @@ const Offers = () => {
       <div 
         className={`${offerSectionClasses}`}
         style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(https://pbs.twimg.com/media/Dl0UM_CWsAAx0xk.jpg)'
         }}
       >
         <div className={offerContentClasses}>
