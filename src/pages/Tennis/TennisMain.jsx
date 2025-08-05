@@ -10,14 +10,26 @@ import "swiper/css/navigation";
 
 // Subcategories
 const subcategories = [
-  { name: "Accessories", path: "/tennis/accessories", image: "https://cdn.shopify.com/s/files/1/2275/8439/files/You_Can_Fit_In_Everything.webp?v=1729320653" },
-  { name: "Rackets", path: "/tennis/rackets", image: "https://nwscdn.com/media/catalog/product/cache/h900xw900/v/e/vermont-colt-is-a-tennis-racket-for-all-ages-to-enjoy_1.jpg" },
-  { name: "Bags", path: "/tennis/bags", image: "https://static.wixstatic.com/media/9c6689_d1afde81f3ce4bb8aacdd9543855def4~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c6689_d1afde81f3ce4bb8aacdd9543855def4~mv2.jpg" },
-  { name: "Footwear", path: "/tennis/footwear", image: "https://tenniscompanion.org/wp-content/uploads/2023/09/8-best-tennis-shoes-for-kids-a-buyers-guide-for-parents.png" },
-  { name: "Balls", path: "/tennis/balls", image: "https://nwscdn.com/media/wysiwyg/3kf/tennis/Image3.jpg" },
-  { name: "Socks", path: "/tennis/socks", image: "https://i.etsystatic.com/13238741/r/il/3addb2/5068179888/il_570xN.5068179888_ti6e.jpg" },
-  { name: "Apparels", path: "/tennis/apparels", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2brz8t-Bfyfw9d4JBHHMZyOiWkBcvVOtnAA&s" },
+  { name: "Accessories",/* path: "/tennis/accessories",*/ image: "https://cdn.shopify.com/s/files/1/2275/8439/files/You_Can_Fit_In_Everything.webp?v=1729320653" },
+  { name: "Rackets",/* path: "/tennis/rackets",*/  image: "https://nwscdn.com/media/catalog/product/cache/h900xw900/v/e/vermont-colt-is-a-tennis-racket-for-all-ages-to-enjoy_1.jpg" },
+  { name: "Bags",/* path: "/tennis/bags",*/ image: "https://static.wixstatic.com/media/9c6689_d1afde81f3ce4bb8aacdd9543855def4~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c6689_d1afde81f3ce4bb8aacdd9543855def4~mv2.jpg" },
+  { name: "Footwear",/* path: "/tennis/footwear",*/ image: "https://tenniscompanion.org/wp-content/uploads/2023/09/8-best-tennis-shoes-for-kids-a-buyers-guide-for-parents.png" },
+  { name: "Balls", /* path: "/tennis/balls",*/ image: "https://nwscdn.com/media/wysiwyg/3kf/tennis/Image3.jpg" },
+  { name: "Socks",/* path: "/tennis/socks",*/ image: "https://i.etsystatic.com/13238741/r/il/3addb2/5068179888/il_570xN.5068179888_ti6e.jpg" },
+  { name: "Apparels", /* path: "/tennis/apparels",*/ image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2brz8t-Bfyfw9d4JBHHMZyOiWkBcvVOtnAA&s" },
 ];
+
+/*
+
+in future when i make this page then it used 
+path: "/tennis/accessories"
+, path: "/tennis/rackets"
+, path: "/tennis/bags
+, path: "/tennis/footwear"
+, path: "/tennis/balls"
+, path: "/tennis/socks"
+, path: "/tennis/apparels"
+*/
 
 
 

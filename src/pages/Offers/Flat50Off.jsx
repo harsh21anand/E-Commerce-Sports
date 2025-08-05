@@ -1,98 +1,100 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ShopCard from "../../components/card/ShopCard";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/nav/Nav";
 import Footer from "../../components/footer/Footer";
 
 const flat50Items = [
   {
     id: 1,
-    name: "Training Shoes (Flat 50% OFF)",
+    name: "Training Shoes ",
     price: "₹2,499",
-    image: "https://via.placeholder.com/400x400?text=Training+Shoes",
+    image: "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/8d162b9cdb224c19b1e9435eeea2e608_9366/amalgo-ws.jpg",
   },
   {
     id: 2,
-    name: "Sports Hoodie (Flat 50% OFF)",
+    name: "Sports Hoodie ",
     price: "₹1,299",
-    image: "https://via.placeholder.com/400x400?text=Sports+Hoodie",
+    image: "https://m.media-amazon.com/images/I/515nCHwxVuL._UY1100_.jpg",
   },
   {
     id: 3,
-    name: "Compression Leggings (Flat 50% OFF)",
+    name: "Compression Leggings ",
     price: "₹799",
-    image: "https://via.placeholder.com/400x400?text=Compression+Leggings",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuDa96DKerrkl1RS_mLjC3zYjKKh9Q_NkyrQ&s",
   },
   {
     id: 4,
-    name: "Gym Bag (Flat 50% OFF)",
+    name: "Gym Bag ",
     price: "₹999",
-    image: "https://via.placeholder.com/400x400?text=Gym+Bag",
+    image: "https://m.media-amazon.com/images/I/81CpBvdt0uL.jpg",
   },
   {
     id: 5,
-    name: "Wrist Watch (Flat 50% OFF)",
+    name: "Wrist Watch ",
     price: "₹1,499",
-    image: "https://via.placeholder.com/400x400?text=Wrist+Watch",
+    image: "https://www.sonatawatches.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw33aaf340/images/Sonata/Catalog/77134PM05W_1.jpg?sw=360&sh=360",
   },
   {
     id: 6,
-    name: "Wireless Earbuds (Flat 50% OFF)",
+    name: "Wireless Earbuds ",
     price: "₹1,999",
-    image: "https://via.placeholder.com/400x400?text=Wireless+Earbuds",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaiMtUYKaiR_5i7MEYwKSifSa_jO2hDGwv-Q&s",
   },
   {
     id: 7,
-    name: "Sports Cap (Flat 50% OFF)",
+    name: "Sports Cap",
     price: "₹349",
-    image: "https://via.placeholder.com/400x400?text=Sports+Cap",
+    image: "https://m.media-amazon.com/images/I/31RcnphEPRL._SR290,290_.jpg",
   },
   {
     id: 8,
-    name: "Yoga Pants (Flat 50% OFF)",
+    name: "Yoga Pants ",
     price: "₹649",
-    image: "https://via.placeholder.com/400x400?text=Yoga+Pants",
+    image: "https://emperorsyathra.com/cdn/shop/files/4M6A3308.jpg?v=1744093906&width=533",
   },
   {
     id: 9,
-    name: "Running T-Shirt (Flat 50% OFF)",
+    name: "Running T-Shirt ",
     price: "₹499",
-    image: "https://via.placeholder.com/400x400?text=Running+T-Shirt",
+    image: "https://m.media-amazon.com/images/I/61gwV+f0XbL._UY350_.jpg",
   },
   {
     id: 10,
-    name: "Fitness Tracker (Flat 50% OFF)",
+    name: "Fitness Tracker ",
     price: "₹2,499",
-    image: "https://via.placeholder.com/400x400?text=Fitness+Tracker",
+    image: "https://m.media-amazon.com/images/I/41Ql3sGmGrL._SR290,290_.jpg",
   },
   {
     id: 11,
-    name: "Ankle Socks Pack (Flat 50% OFF)",
+    name: "Ankle Socks Pack ",
     price: "₹299",
-    image: "https://via.placeholder.com/400x400?text=Ankle+Socks+Pack",
+    image: "https://m.media-amazon.com/images/I/51IJ0yzJjpL._SR290,290_.jpg",
   },
   {
     id: 12,
-    name: "Resistance Band Set (Flat 50% OFF)",
+    name: "Resistance Band Set ",
     price: "₹599",
-    image: "https://via.placeholder.com/400x400?text=Resistance+Band+Set",
+    image: "https://m.media-amazon.com/images/I/511Qvnov2XL._AC_.jpg",
   },
   {
     id: 13,
-    name: "Dumbbell Set (Flat 50% OFF)",
+    name: "Dumbbell Set ",
     price: "₹2,199",
-    image: "https://via.placeholder.com/400x400?text=Dumbbell+Set",
+    image: "https://m.media-amazon.com/images/I/611A37H1D2L._UF894,1000_QL80_.jpg",
   },
   {
     id: 14,
-    name: "Gym Towel Pack (Flat 50% OFF)",
+    name: "Gym Towel Pack ",
     price: "₹249",
-    image: "https://via.placeholder.com/400x400?text=Gym+Towel+Pack",
+    image: "https://m.media-amazon.com/images/I/61CGvPEdCgL._UF894,1000_QL80_.jpg",
   },
   {
     id: 15,
-    name: "Sweatband Set (Flat 50% OFF)",
+    name: "Sweatband Set ",
     price: "₹199",
-    image: "https://via.placeholder.com/400x400?text=Sweatband+Set",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxbHL8cJxBDM3nVtz85qPdgAnjQJnGz4lWcqs63MwOlvNIDv9IpKusauH47zyJJ9pfJfU&usqp=CAU",
   },
 ];
 
@@ -114,15 +116,9 @@ const Flat50Off = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-10">
-      {/* Back Button */}
-      <button
-        onClick={() => navigate("/")}
-        className="flex items-center mb-6 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-lg font-semibold shadow"
-        style={{ maxWidth: 200 }}
-      >
-        <span className="mr-2 text-xl">&larr;</span> Back
-      </button>
+    <div className="pt-18 bg-gray-100 min-h-screen">
+     <Header />
+     <Navbar />
 
       {/* Title */}
       <h1 className="text-3xl font-bold mb-8 text-center text-orange-500">
@@ -151,6 +147,7 @@ const Flat50Off = () => {
           </div>
         ))}
       </div>
+      <br /><br />
       <Footer />
     </div>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ShopCard from "../../components/card/ShopCard";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/nav/Nav"; 
 import Footer from "../../components/footer/Footer";
 
 const bogoItems = [
@@ -8,91 +10,91 @@ const bogoItems = [
       id: 1,
       name: "Sports T-Shirt (Buy 1 Get 1)",
       price: "₹999",
-      image: "https://via.placeholder.com/400x400?text=Sports+T-Shirt",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmU2q9_U9Wc56Zn9_dR32p3WmmyOVad0V3SA&s",
     },
     {
       id: 2,
       name: "Running Shorts (Buy 1 Get 1)",
       price: "₹799",
-      image: "https://via.placeholder.com/400x400?text=Running+Shorts",
+      image: "https://m.media-amazon.com/images/I/71n-TJswlRL._UY1000_.jpg",
     },
     {
       id: 3,
       name: "Gym Gloves (Buy 1 Get 1)",
       price: "₹499",
-      image: "https://via.placeholder.com/400x400?text=Gym+Gloves",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAf5FNvxnpvi-_CPVBC06JhS0jad5byHAIUg&s",
     },
     {
       id: 4,
       name: "Yoga Mat (Buy 1 Get 1)",
       price: "₹1,299",
-      image: "https://via.placeholder.com/400x400?text=Yoga+Mat",
+      image: "https://i0.wp.com/post.healthline.com/wp-content/uploads/2022/05/2240520-11-Best-Yoga-Mats-to-Support-Your-Practice-in-2022-1296x728-Header-f0dec1.jpg?w=1155&h=1528",
     },
     {
       id: 5,
       name: "Sports Cap (Buy 1 Get 1)",
       price: "₹399",
-      image: "https://via.placeholder.com/400x400?text=Sports+Cap",
+      image: "https://images.meesho.com/images/products/248621097/iijqc_512.jpg",
     },
     {
       id: 6,
       name: "Water Bottle (Buy 1 Get 1)",
       price: "₹299",
-      image: "https://via.placeholder.com/400x400?text=Water+Bottle",
+      image: "https://images.meesho.com/images/products/422644846/ulstw_512.jpg",
     },
     {
       id: 7,
       name: "Sweatband Set (Buy 1 Get 1)",
       price: "₹199",
-      image: "https://via.placeholder.com/400x400?text=Sweatband+Set",
+      image: "https://m.media-amazon.com/images/I/71cJfNkzGJL._UF350,350_QL50_.jpg",
     },
     {
       id: 8,
       name: "Compression Socks (Buy 1 Get 1)",
       price: "₹599",
-      image: "https://via.placeholder.com/400x400?text=Compression+Socks",
+      image: "https://images.meesho.com/images/products/485506465/evni1_512.jpg",
     },
     {
       id: 9,
       name: "Sports Duffel Bag (Buy 1 Get 1)",
       price: "₹1,499",
-      image: "https://via.placeholder.com/400x400?text=Duffel+Bag",
+      image: "https://mikebags.com/cdn/shop/files/8_300x.jpg?v=1737183121",
     },
     {
       id: 10,
       name: "Athletic Sunglasses (Buy 1 Get 1)",
       price: "₹899",
-      image: "https://via.placeholder.com/400x400?text=Athletic+Sunglasses",
+      image: "https://images.meesho.com/images/products/223495248/p0wjf_512.webp",
     },
     {
       id: 11,
       name: "Resistance Band (Buy 1 Get 1)",
       price: "₹349",
-      image: "https://via.placeholder.com/400x400?text=Resistance+Band",
+      image: "https://m.media-amazon.com/images/I/41d-IzCbJ-L._AC_.jpg",
     },
     {
       id: 12,
       name: "Ankle Support (Buy 1 Get 1)",
       price: "₹449",
-      image: "https://via.placeholder.com/400x400?text=Ankle+Support",
+      image: "https://rukminim2.flixcart.com/image/704/844/l4ln8nk0/support/z/9/y/both-the-legs-ankle-support-for-pain-relief-ankle-wrap-grip-gym-original-imagfgggtjzqywhp.jpeg?q=90&crop=false",
     },
     {
       id: 13,
       name: "Fitness Tracker Strap (Buy 1 Get 1)",
       price: "₹549",
-      image: "https://via.placeholder.com/400x400?text=Tracker+Strap",
+      image: "https://m.media-amazon.com/images/I/41e3lTBIlVL.jpg",
     },
     {
       id: 14,
       name: "Gym Towel (Buy 1 Get 1)",
       price: "₹249",
-      image: "https://via.placeholder.com/400x400?text=Gym+Towel",
+      image: "https://m.media-amazon.com/images/I/71GLtjowMAL._SL1200_.jpg",
     },
     {
       id: 15,
       name: "Wrist Wraps (Buy 1 Get 1)",
       price: "₹299",
-      image: "https://via.placeholder.com/400x400?text=Wrist+Wraps",
+      image: "https://m.media-amazon.com/images/I/61H-2WgPT+L.jpg",
     },
   ];
   
@@ -115,18 +117,14 @@ const Buy1Get1 = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-6">
-      {/* Back Button */}
-      <button
-        onClick={() => navigate("/offers")}
-        className="flex items-center mb-6 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-lg font-semibold"
-      >
-        <span className="mr-2">&larr;</span> Back
-      </button>
+    <div className="pt-18 bg-gray-100 min-h-screen">
+      <Header />
+      <Navbar />
+      
 
-      <h1 className="text-3xl font-bold mb-6 text-center">🎁 Buy 1 Get 1</h1>
+      <h1 className="text-3xl font-bold mt-8 mb-6 text-center">🎁 Buy 1 Get 1</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {bogoItems.map((item, index) => (
           <div
             key={index}
@@ -148,6 +146,7 @@ const Buy1Get1 = () => {
           </div>
         ))}
       </div>
+      <br /><br />
       <Footer />
     </div>
   );
