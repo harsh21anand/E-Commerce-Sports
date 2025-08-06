@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CartItem from "./CartItem";
 import CartSummary from "./CartSummary";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/nav/Nav";
+import Footer from "../../components/footer/Footer";
+
 import ApplyCoupon from "./ApplyCoupon";
 import ErrorBoundary from "../../components/ErrorBoundary";
 
@@ -119,16 +123,12 @@ const Cart = () => {
   const CartContent = () => {
     const navigate = useNavigate();
     return (
-      <div className="container mx-auto px-4 py-8">
-        <button
-          onClick={() => navigate(-1)}
-          className="flex items-center mb-6 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-lg font-semibold shadow"
-          style={{ maxWidth: 200 }}
-        >
-          <span className="mr-2" style={{ fontSize: '1.5em' }}>&larr;</span>
-          Back
-        </button>
-        <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
+      <div className="flex flex-col min-h-screen overflow-x-hidden">
+        <Header />
+        <Navbar />
+       
+        
+        <h1 className="text-3xl font-bold mb-8 "><br /><br />Shopping Cart</h1>
 
         {!cartItems || cartItems.length === 0 ? (
           <p className="text-center text-gray-600">Your cart is empty.</p>
@@ -163,8 +163,12 @@ const Cart = () => {
                 Proceed to Checkout
               </button>
             </div>
+            
           </div>
+         
         )}
+        <br /><br />
+       
       </div>
     );
   };

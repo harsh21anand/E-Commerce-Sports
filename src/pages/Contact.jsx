@@ -1,21 +1,22 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
+import Header from "../components/header/Header";
+import Navbar from "../components/nav/Nav";
 
 function Contact() {
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <Navbar />
       {/* Hero Section */}
-      <section className="bg-black text-white py-16 text-center">
-        <h1 className="text-5xl font-extrabold mb-4">Get In Touch</h1>
-        <p className="text-lg">
-          We'd love to hear from you. Reach out for inquiries, support, or feedback.
-        </p>
+      <section className=" text- yellow-500 relative bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20221010/pngtree-contact-us-concept-client-support-communication-photo-image_9650052.jpg')] bg-cover bg-center h-64 md:h-96 flex items-center justify-center">
+       
       </section>
 
       {/* Contact Information */}
       <section className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Address */}
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center hover:scale-105 transition">
+        <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 text-white p-6 rounded-xl shadow-lgrounded-lg p-6 text-center hover:scale-105 transition">
           <h2 className="text-xl font-bold mb-2">Our Address</h2>
           <p className="text-gray-600">
             Sports Hub Headquarters<br />
@@ -25,7 +26,7 @@ function Contact() {
         </div>
 
         {/* Phone */}
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center hover:scale-105 transition">
+        <div className="bg-gradient-to-br from-blue-400 to-blue-600 text-white p-6 rounded-xl shadow-lg text-center hover:scale-105 transition">
           <h2 className="text-xl font-bold mb-2">Call Us</h2>
           <p className="text-gray-600">
             +91 95258 74518 <br />
@@ -34,7 +35,7 @@ function Contact() {
         </div>
 
         {/* Email */}
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center hover:scale-105 transition">
+        <div className="bg-gradient-to-br from-green-400 to-green-600 text-white p-6 rounded-xl shadow-lg text-center hover:scale-105 transition">
           <h2 className="text-xl font-bold mb-2">Email Us</h2>
           <p className="text-gray-600">contact@sports_hub.in</p>
         </div>
@@ -46,7 +47,7 @@ function Contact() {
   className="relative bg-[url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center py-16 min-h-screen"
 >
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+  <div className="absolute inset-0  bg-opacity-60 z-0"></div>
 
   {/* Contact Form and Map Container */}
   <div className="relative container mx-auto px-6 z-10 grid grid-cols-1 md:grid-cols-2 gap-6">

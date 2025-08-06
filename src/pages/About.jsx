@@ -5,9 +5,9 @@ import Footer from "../components/footer/Footer";
 
 // Example image collection (replace with your own relevant assets)
 const images = [
-  "/images/factory1.jpg",
-  "/images/factory2.jpg",
-  "/images/factory3.jpg",
+  "https://c8.alamy.com/comp/2R66XAH/laakdal-07-june-2023-prime-minister-alexander-de-croo-places-a-parcel-on-a-conveyor-belt-during-a-visit-to-nike-european-logistics-campus-in-laakdal-wednesday-07-june-2023-nike-is-the-worlds-largest-supplier-of-athletic-shoes-and-apparel-and-a-major-manufacturer-of-sports-equipment-nike-european-logistics-campus-elc-is-impressive-area-of-45-football-pitches-is-at-the-forefront-of-innovation-and-sustainable-growth-and-employs-nearly-7000-people-in-belgium-it-is-nikes-first-logistics-center-in-the-world-and-one-of-the-most-important-e-commerce-platforms-in-europe-in-other-words-7-2R66XAH.jpg",
+  "https://intrepidsourcing.com/wp-content/uploads/2019/01/STARTERMANUFACTURING7.jpg",
+  "https://mecaluxcom.cdnwm.com/img/case-studies/sportisimo-ecommerce-warehouse-czechia-sporting-goods.1.2.jpg?imwidth=1280&imdensity=1",
 ];
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
 
       <main className="flex-grow bg-white text-gray-800">
         {/* Hero Section */}
-        <section className="relative bg-[url('/images/about-hero.jpg')] bg-cover bg-center h-64 md:h-96 flex items-center justify-center">
+        <section className="relative bg-[url('https://cdn.pixabay.com/photo/2016/12/14/15/25/f1-1906648_1280.jpg')] bg-cover bg-center h-64 md:h-96 flex items-center justify-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white bg-black bg-opacity-50 px-4 py-2 rounded">
             About Us
           </h1>
@@ -32,7 +32,7 @@ const About = () => {
           <div className="md:flex items-start gap-8">
             <div className="md:w-1/3">
               <img
-                src="/images/nihil-kharabanda.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcADAuF2Q2R-RwzZ88zFR8uQbUSX1ccbW5Q&s"
                 alt="Mr. Nihal Chand Kharabanda"
                 className="rounded-lg shadow-lg"
               />
